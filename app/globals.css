@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply font-sans;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -9,13 +13,92 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #001835;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.carousel .control-arrow {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white; /* Ensure arrows are visible on white */
+  border-radius: 50%; /* Circular arrows */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.carousel .control-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.slider .animated {
+  transform: translate3d(0, 0, 0) !important;
+}
+
+.carousel .slider-wrapper {
+  overflow: hidden;
+  margin: auto;
+  width: 92% !important;
+}
+
+.carousel-root {
+  display: flex !important;
+  justify-content: center !important;
+}
+.carousel.carousel-slider {
+  width: 70%;
+}
+
+.carousel.carousel-slider .control-arrow {
+  background-color: black !important;
+  top: 70px !important;
+}
+
+.carousel.carousel-slider .control-arrow .carousel .control-arrow.control-prev {
+  left: -50px;
+}
+
+.carousel .control-arrow.control-next {
+  right: -50px; /* Adjust position of right arrow */
+}
+
+.carousel .control-arrow:before {
+  font-size: 20px; /* Adjust arrow size */
+}
+
+.carousel .slide {
+  padding: 10px; /* Adjust padding for slide spacing */
+}
+
+
+/* Neon Line Styles */
+.neon-line-first,
+.neon-line-last {
+  width: 200px; /* Increase the width if needed */
+  height: 200px; /* Increase height to make the line thicker */
+  background: #00e37c; /* Neon color */
+  box-shadow: 0 0 20px 10px rgba(0, 227, 124, 0.8); /* Stronger neon glow effect */
+}
+
+.neon-line-first {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  transform: rotate(45deg);
+}
+
+.neon-line-last {
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  transform: rotate(-45deg);
 }
