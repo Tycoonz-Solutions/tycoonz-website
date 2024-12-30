@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYMENT_DIR=$HOME/project
+    - export DEPLOYMENT_DIR=/home/urwfbhfp/repositories/tycoonz-website
     - /bin/bash -c "cd $DEPLOYMENT_DIR && npm install"
     - /bin/bash -c "cd $DEPLOYMENT_DIR && npm run build"
     - /bin/bash -c "cd $DEPLOYMENT_DIR && pm2 restart next-app || pm2 start npm --name 'next-app' -- start"
