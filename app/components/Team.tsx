@@ -89,14 +89,15 @@ export default function Team() {
           <div className="w-[30%]">
             <h2 className="text-[30px] md:text-[46px] leading-[38px] md:leading-[50px] font-bold text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
               <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
-                Meet Our Experts
+               The People Powering Our Vision
                 <span className="absolute left-0 bottom-[-12px] w-full h-[5px] bg-green-500"></span>
               </span>
             </h2>
           </div>
           <p className="mt-4 w-[55%] text-lg md:text-[18px] text-[#AEB5AD]">
-            Our expert team will assess your needs and create a customized blockchain platform. With the right technologies, we’ll develop Blockchain, Web & Mobile Apps, and DevOps solutions that drive revenue and accelerate growth.
-          </p>
+          Behind every innovation is a team of visionaries and experts 
+dedicated to turning ideas into impactful solutions. Meet the minds 
+driving our success </p>
         </div>
         <Carousel
           showArrows={false}

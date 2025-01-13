@@ -17,9 +17,9 @@ export default function Reach() {
         </h2>
 
         <p className="mt-4 w-[90%] md:w-[55%] text-[18px] text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
-          Tycoonz Solutions partners with businesses worldwide, delivering
-          tailored technology solutions that meet diverse market needs with
-          precision and excellence.
+          Tycoonz Solutions empowers businesses globally with advanced
+          technology solutions, designed to meet diverse market demands with
+          precision, creativity, and excellence.
         </p>
       </div>
       <div className="container flex flex-col justify-center items-center mx-auto px-4 mt-[100px]">
