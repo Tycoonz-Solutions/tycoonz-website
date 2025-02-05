@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import logo from "../../public/assets/logo.png";
+// import portfolio from "../../public/";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -114,6 +115,18 @@ export default function Navbar() {
       Testimonials
     </a>
   </li>
+  <li className="md:border-0">
+  <a
+    href="/portfolio.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex justify-end mr-12 px-4 py-2 text-sm text-center hover:text-green-500"
+  >
+    Portfolio
+  </a>
+</li>
+
+
   <li className="mt-2 flex justify-end mb-4 md:mt-0 md:mb-0">
     <a
       href="#contact"

@@ -22,10 +22,11 @@ export async function POST(request: Request) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL_USER, // e.g., "info@profile-diagnostic.com"
-      pass: process.env.EMAIL_PASS, // App password or actual password
+      user: process.env.EMAIL_USER, // Your Gmail address
+      pass: process.env.EMAIL_PASS, // Your Gmail App Password
     },
   });
+  
 
   // Mail options
   const mailOptions = {
