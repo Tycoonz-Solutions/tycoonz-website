@@ -9,7 +9,8 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-[#1D202369] top-0 shadow-md fixed w-full z-[99999]">
+<nav className="bg-[black] top-0 shadow-md fixed w-full z-[99999]">
+
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
       <Image
   width={130}
@@ -48,12 +49,12 @@ export default function Navbar() {
         <ul
   className={`${
     isMenuOpen ? "block" : "hidden"
-  } absolute bg-[#010101] text-white md:text-[#AEB5AD] md:bg-transparent top-full left-0 w-full shadow-md md:relative md:flex md:gap-6 md:items-center md:w-auto md:shadow-none`}
+  } absolute bg-[#010101] text-white md:text-[#AEB5AD] md:bg-transparent top-full left-0 w-full shadow-md md:relative md:flex gap-1 md:gap-2 lg:gap-3 md:items-center md:w-auto md:shadow-none`}
 >
   <li className=" md:border-0 ">
     <a
       href="#home"
-      className="flex justify-end mr-12 px-4 py-2 text-sm text-center hover:text-green-500"
+      className="flex justify-end mr-8 px-4 py-2 text-sm text-center hover:text-green-500"
       onClick={(e) => {
         e.preventDefault();
         setIsMenuOpen(false);
@@ -66,7 +67,7 @@ export default function Navbar() {
   <li className=" md:border-0 ">
     <a
       href="#about"
-      className="flex justify-end mr-12 px-4 py-2 text-sm text-center hover:text-green-500"
+      className="flex justify-end mr-8 px-4 py-2 text-sm text-center hover:text-green-500"
       onClick={(e) => {
         e.preventDefault();
         setIsMenuOpen(false);
@@ -76,10 +77,10 @@ export default function Navbar() {
       About
     </a>
   </li>
-  <li className=" md:border-0 ">
+  {/* <li className=" md:border-0 ">
     <a
       href="#team"
-      className="flex justify-end mr-12 px-4 py-2 text-sm text-center hover:text-green-500"
+      className="flex justify-end mr-8 px-4 py-2 text-sm text-center hover:text-green-500"
       onClick={(e) => {
         e.preventDefault();
         setIsMenuOpen(false);
@@ -88,11 +89,11 @@ export default function Navbar() {
     >
       Team
     </a>
-  </li>
+  </li> */}
   <li className=" md:border-0 ">
     <a
       href="#services"
-      className="flex justify-end mr-12 px-4 py-2 text-sm text-center hover:text-green-500"
+      className="flex justify-end mr-8 px-4 py-2 text-sm text-center hover:text-green-500"
       onClick={(e) => {
         e.preventDefault();
         setIsMenuOpen(false);
@@ -105,7 +106,7 @@ export default function Navbar() {
   <li className=" md:border-0 ">
     <a
       href="#testimonials"
-      className="flex justify-end mr-12 px-4 py-2 text-sm text-center hover:text-green-500"
+      className="flex justify-end mr-8 px-4 py-2 text-sm text-center hover:text-green-500"
       onClick={(e) => {
         e.preventDefault();
         setIsMenuOpen(false);
@@ -120,7 +121,7 @@ export default function Navbar() {
     href="/portfolio.pdf"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex justify-end mr-12 px-4 py-2 text-sm text-center hover:text-green-500"
+    className="flex justify-end mr-8 px-4 py-2 text-sm text-center hover:text-green-500"
   >
     Portfolio
   </a>
@@ -130,7 +131,7 @@ export default function Navbar() {
   <li className="mt-2 flex justify-end mb-4 md:mt-0 md:mb-0">
     <a
       href="#contact"
-      className="flex justify-end mr-12 bg-none  text-[#00E37C] px-4 py-2 rounded-lg text-center md:inline-block "
+      className="flex justify-end mr-8 bg-none  text-[#00E37C] px-4 py-2 rounded-lg text-center md:inline-block "
       onClick={(e) => {
         e.preventDefault();
         setIsMenuOpen(false);

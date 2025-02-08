@@ -45,9 +45,9 @@ export default function Footer() {
               <a href="#about" className="hover:text-green-500">
                 About
               </a>
-              <a href="#team" className="hover:text-green-500">
+              {/* <a href="#team" className="hover:text-green-500">
                 Team
-              </a>
+              </a> */}
               <a href="#services" className="hover:text-green-500">
                 Services
               </a>
