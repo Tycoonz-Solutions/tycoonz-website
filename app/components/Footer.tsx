@@ -1,11 +1,53 @@
+"use client"
+
+import { useState } from "react";
 import Image from "next/image";
 import logo from "../../public/assets/logo.png";
 import emailArrow from "../../public/assets/emailArrow.png";
 import Social1 from "../../public/assets/Social1.png";
 import Social2 from "../../public/assets/Social2.png";
 import Social3 from "../../public/assets/Social3.png";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Footer() {
+const [email, setEmail] = useState("");
+
+const validateEmail = (email: string) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!validateEmail(email)) {
+    toast.error("Please enter a valid email address.");
+    return;
+  }
+
+  try {
+    // const response = await fetch("/api/send-email", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ email }), // Pass as object
+    // });
+
+    // const result = await response.json();
+    // if (response.ok) {
+      toast.success("You have subscribed successfully!");
+      setEmail("");
+    // } else {
+    //   toast.error(result.message || "Subscription failed.");
+    // }
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    toast.error("An error occurred while subscribing. Please try again.");
+  }
+};
+  
   return (
     <footer className="bg-[#]FFFFFF text-[#001835] py-10">
       <div className="container mx-auto px-4">
@@ -61,35 +103,40 @@ export default function Footer() {
           </div>
 
           <div className=" flex flex-col md:w-[35%] mt-10 md:mt-0 gap-8 justify-evenly">
-            <div>
-              <label
-                htmlFor="firstName"
-                className="block md:mb-2 text-[13px] md:text-[14px] text-[#FFFFFF]"
-              >
-                Subscribe to our newsletter
-              </label>
-              <div className="flex gap-6 align-middle items-center">
-                <input
-                  id="firstName"
-                  type="text"
-                  placeholder="Enter your email address"
-                  className="w-full px-4 py-2 bg-transparent text-[13px] md:text-[14px] border-b border-gray-500 focus:outline-none focus:border-green-500 text-[#FFFFFF] placeholder-gray-400"
-                />
-                <Image
-                  src={emailArrow}
-                  alt="Next Arrow"
-                  className="w-[15.8px] h-[14.85px] ml-[-40px]"
-                />
-                <button
-                  className="bg-[#00E37C] flex gap-2 py-2 justify-center align-middle items-center px-6 rounded-lg text-[12px] text-[#000000] md:text-[15px] hover:bg-green-500"
-                  style={{
-                    boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",
-                  }}
-                >
-                  Subscribe
-                </button>
-              </div>
-            </div>
+          <div>
+      <label
+        htmlFor="email"
+        className="block md:mb-2 text-[13px] md:text-[14px] text-[#FFFFFF]"
+      >
+        Subscribe to our newsletter
+      </label>
+      <form onSubmit={handleSubmit}>
+        <div className="flex gap-6 align-middle items-center">
+          <input
+            id="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email address"
+            className="w-full px-4 py-2 bg-transparent text-[13px] md:text-[14px] border-b border-gray-500 focus:outline-none focus:border-green-500 text-[#FFFFFF] placeholder-gray-400"
+          />
+          <Image
+            src={emailArrow}
+            alt="Next Arrow"
+            className="w-[15.8px] h-[14.85px] ml-[-40px]"
+          />
+          <button
+            type="submit"
+            className="bg-[#00E37C] flex gap-2 py-2 justify-center align-middle items-center px-6 rounded-lg text-[12px] text-[#000000] md:text-[15px] hover:bg-green-500"
+            style={{
+              boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",
+            }}
+          >
+            Subscribe
+          </button>
+        </div>
+      </form>
+    </div>
 
             <div>
               <p className="mb-4 mt-6 md:mt-0 text-[13px] md:text-[14px] text-[#FFFFFF]">
