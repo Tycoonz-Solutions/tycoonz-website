@@ -35,9 +35,10 @@ export default function Hero() {
       <div className="relative w-[100%] md:w-[43%] flex flex-col align-bottom text-left pr-4 col-span-3 z-10 container ">
         <Title title="Welcome to Tycoonz Solutions" />
         <h2 className="mt-6 mb-6 text-[30px] w-[100%] lg:w-[85%] lg:text-[46px] leading-[48px] md:leading-[70px] font-bold text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
-          Empowering Businesses with Blockchain, Web3.0, &{" "}
+          {/* Empowering Businesses with Blockchain, Web3.0, & */}
+          Navigating the Future through Blockchain, Web3.0{" "}
           <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
-            Tech Solutions
+            & Tech Solutions
             <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500"></span>
           </span>{" "}
           .
@@ -47,15 +48,16 @@ export default function Hero() {
           Transforming your vision into cutting-edge realities.
         </p>
         <div className="flex justify-start space-x-4">
-          <button
-            className="bg-[#00E37C] flex gap-2 py-2 justify-center align-middle items-center px-6 rounded-lg text-[12px] text-[#000000] md:text-[15px] hover:bg-green-500"
-            style={{
-              boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",
-            }}
-          >
-            {" "}
-            Get Started{" "}
-          </button>
+          <a href="#contact">
+            <button
+              className="bg-[#00E37C] flex gap-2 py-2 justify-center align-middle items-center px-6 rounded-lg text-[12px] text-[#000000] md:text-[15px] hover:bg-green-500"
+              style={{
+                boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",
+              }}
+            >
+              Get Started
+            </button>
+          </a>
         </div>
       </div>
 
@@ -65,4 +67,3 @@ export default function Hero() {
     </section>
   );
 }
-

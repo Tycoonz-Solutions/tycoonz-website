@@ -3,9 +3,9 @@ import Title from "./Title";
 export default function Statistics() {
 
     const stats = [
-      { value: '98%', description: '98% client retention show our commitment to lasting success.', title:"Client Retention" },
-      { value: '500+ ', description: 'We have successfully delivered over 500 web and blockchain projects for diverse industries.', title:"Projects" },
-      { value: '10+', description: 'Tycoonz solutions has worked with clients across 10+ countries, providing tailored digital solutions.', title:"Global Reach" },
+      { value: '90%', description: '90% client retention show our commitment to lasting success.', title:"Client Retention" },
+      { value: '100+ ', description: 'We have successfully delivered over 100 Blockchain, Healthcare, Mobile App & Web Projects for diverse Industries globally.', title:"Projects" },
+      { value: '10+', description: 'Tycoonz solutions has worked with clients across 10+ countries in three different continents, providing tailored digital solutions.', title:"Global Reach" },
     ];
   
     return (

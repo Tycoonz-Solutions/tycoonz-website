@@ -12,10 +12,18 @@ export default function Footer() {
         <div className="flex flex-col ml-3 md:ml-0 md:flex-row justify-between">
           <div className="flex flex-col md:w-[25%] gap-8">
             <Image src={logo} alt="Next Arrow" width={164} height={100} />
+            <p className=" text-[14px] md:text-[15px] text-white font-bold">
+              Our Journey
+            </p>
+
             <p className=" text-[13px] md:text-[14px] text-[#AEB5AD]">
-              Tycoonz Solutions is a global leader in blockchain development,
-              Web3.0 integration, and custom tech solutions, helping businesses
-              innovate and grow through cutting-edge technology.
+              Tycoonz Solutions was born from a shared dream of building more
+              than just software—we set out to build trust, meaningful
+              partnerships, and lasting value. What started as a small team with
+              big ambitions has grown into a trusted partner serving clients
+              across different time zones. Our journey has been shaped by a
+              relentless focus on collaboration, adaptability, and the drive to
+              solve complex problems.
             </p>
 
             <p className=" text-[13px] md:text-[14px] text-[#AEB5AD]">
@@ -37,9 +45,9 @@ export default function Footer() {
               <a href="#about" className="hover:text-green-500">
                 About
               </a>
-              <a href="#team" className="hover:text-green-500">
+              {/* <a href="#team" className="hover:text-green-500">
                 Team
-              </a>
+              </a> */}
               <a href="#services" className="hover:text-green-500">
                 Services
               </a>
@@ -106,45 +114,42 @@ export default function Footer() {
         ></div>
 
         <div className="text-[12px] w-full justify-between flex mt-2 md:mt-0  md:text-[14px] text-[#FFFFFF]">
-          <div >
-          © 2024 Tycoonz Solutions. All rights reserved.
-          </div>
+          <div>© 2024 Tycoonz Solutions. All rights reserved.</div>
           <div className="flex gap-4">
-  <a
-    href="https://www.linkedin.com/company/tycoonz-solutions/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Image
-      src={Social1}
-      alt="LinkedIn"
-      className="w-[24px] h-[24px]"
-    />
-  </a>
-  <a
-    href="https://www.facebook.com/share/18Qpdfi43V/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Image
-      src={Social2}
-      alt="Instagram"
-      className="w-[24px] h-[24px]"
-    />
-  </a>
-  <a
-   href="https://www.instagram.com/tycoonzsolutions?igsh=MTg0NnYzeXoyNW1pNA=="
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Image
-      src={Social3}
-      alt="Facebook"
-      className="w-[24px] h-[24px]"
-    />
-  </a>
-</div>
-
+            <a
+              href="https://www.linkedin.com/company/tycoonz-solutions/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={Social1}
+                alt="LinkedIn"
+                className="w-[24px] h-[24px]"
+              />
+            </a>
+            <a
+              href="https://www.facebook.com/share/18Qpdfi43V/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={Social2}
+                alt="Instagram"
+                className="w-[24px] h-[24px]"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/tycoonzsolutions?igsh=MTg0NnYzeXoyNW1pNA=="
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src={Social3}
+                alt="Facebook"
+                className="w-[24px] h-[24px]"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </footer>

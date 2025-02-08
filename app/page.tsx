@@ -12,7 +12,7 @@ export default function HomePage() {
       <Hero />
       <Features />
       <Statistics />
-      <Team />
+      {/* <Team /> */}
       <Solutions />
       <Reach />
       <Clients />

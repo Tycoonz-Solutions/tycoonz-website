@@ -12,10 +12,10 @@ export default function Solutions() {
         <Title title="Our Expertise" />
         <h2 className="mt-6 text-[30px] w-[90%] md:w-[45%] md:text-[46px] leading-[48px] md:leading-[70px] font-bold text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
           <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
-            Innovative
+          Solutions Built
             <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500"></span>
           </span>{" "}
-          Solutions for a Digital-First World
+          Around Your Success
         </h2>
 
         <p className="mt-4 w-[90%] md:w-[55%] text-[18px] text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
@@ -28,7 +28,7 @@ export default function Solutions() {
       <div className="relative">
         <Solution
           title="Blockchain <br /> Development"
-          desc="Harness the power of blockchain technology to enhance security, transparency, and efficiency in your operations."
+          desc="We design secure and efficient blockchain systems to enhance transparency, security, and streamline operations"
           ele1="Custom Blockchain Solutions"
           ele2="Smart Contract Development"
           ele3="Decentralized <br/> Applications (DApps)"
@@ -47,7 +47,7 @@ export default function Solutions() {
       {/* Second Solution */}
       <Solution
         title="Web3.0 <br /> Integration"
-        desc="Prepare your business for the next era of the internet with Web3.0 technologies."
+        desc="Empower your business with decentralized technologies and prepare for the future of a more secure, transparent, and user-centric internet."
         ele1="Decentralize Your Systems"
         ele2="NFT Integration"
         ele3="Crypto Payment Solutions"
@@ -68,7 +68,7 @@ export default function Solutions() {
       <div className="relative">
         <Solution
           title="Technical Consulting"
-          desc="Leverage our expertise to solve your toughest technical challenges and future-proof your business."
+          desc="Expert solutions for today’s hurdles and tomorrow’s growth."
           ele1="System Audits"
           ele2="Strategic Planning"
           ele3="Training & Support"
