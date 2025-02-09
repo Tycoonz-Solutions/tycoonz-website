@@ -17,29 +17,46 @@ const testimonials = [
   {
     id: 1,
     image: doc1,
-    name: "Sasha Kindred",
+    name: "BlackChain",
     role: "MD CEO",
-    company: "NextGen Enterprises",
-    testimonial:
-      "We needed a custom software solution for managing our supply chain, and Tycoonz delivered beyond our expectations. Their solution transformed our efficiency and saved us time and resources.",
+    company: "BlackChain Technology S.I.A.",
+    testimonial: "Partnering with Tycoonz Solution for our blockchain project was an incredible experience. Their deep expertise in Solana staking made integrating BCT staking features smooth and secure. The platform is efficient, user-friendly, and built with precision. We highly recommend them for any blockchain development!",
   },
   {
     id: 2,
     image: doc2,
-    name: "John Doe",
+    name: "Looking App",
     role: "CTO",
-    company: "Tech Innovations",
+    company: "Quantum Assets Technologies S.I.A",
     testimonial:
-      "Tycoonz helped us build a scalable infrastructure that exceeded our goals. The team is truly exceptional!",
+      "We couldn’t have asked for a better development team than Tycoonz Solution! They built Looking-App with exceptional attention to detail, creating a seamless marketplace and job-hunting platform. Their innovation and technical skills truly set them apart!",
   },
   {
     id: 3,
     image: doc4,
-    name: "Emily Smith",
+    name: "Onyx Wallet",
     role: "Founder",
-    company: "Smith Ventures",
+    company: "Quantum Assets Technologies S.I.A.",
     testimonial:
-      "The professionalism and dedication of the Tycoonz team are unmatched. They delivered exactly what we needed.",
+      "Abdullah and his team played a crucial role in developing Onyx Wallet, ensuring it was secure, efficient, and user-friendly. Their dedication, technical expertise, and ability to solve complex challenges made the entire development process seamless. If you need a reliable team for your blockchain project, look no further!",
+  },
+  {
+    id: 3,
+    image: doc4,
+    name: "Profile Diagnostic",
+    role: "Founder",
+    company: "Dennis Poschner",
+    testimonial:
+      "Working with Abdul on Profile Diagnostic was a pleasure from start to finish. He turned our vision for an intuitive and reliable sickness diagnosis platform into reality. The site is fast, easy to use, and incredibly efficient. We couldn’t be happier with the results!",
+  },
+  {
+    id: 3,
+    image: doc4,
+    name: "Xavier AI",
+    role: "Founder",
+    company: "Quantivium L.L.C.",
+    testimonial:
+      "Tycoonz Solutions did an amazing job bringing Xavier AI to life. They designed a sleek, responsive website that perfectly showcases our AI services. Their expertise, attention to detail, and commitment to quality made the process effortless. Highly recommend them!",
   },
 ];
 
@@ -144,7 +161,7 @@ export default function Clients() {
                     {testimonials[activeIndex].name}
                   </div>
                   <div className="text-[#AEB5AD] text-[13px] md:text-lg">
-                    {testimonials[activeIndex].role} @{" "}
+                    {/* {testimonials[activeIndex].role} @{" "} */}
                     <span className="text-[#00E37C] ">
                       {testimonials[activeIndex].company}
                     </span>
