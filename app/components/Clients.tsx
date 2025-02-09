@@ -12,11 +12,13 @@ import doc2 from "../../public/assets/doc1.png";
 import doc3 from "../../public/assets/doc3.png";
 import doc4 from "../../public/assets/doc4.png";
 import nameLine from "../../public/assets/nameLine.png";
+import docNew from "../../public/assets/dpp (2).jpg";
+import docNewTwo from "../../public/assets/newwwww (1).jpg";
 
 const testimonials = [
   {
     id: 1,
-    image: doc1,
+    image: docNew,
     name: "BlackChain",
     role: "MD CEO",
     company: "BlackChain Technology S.I.A.",
@@ -33,7 +35,7 @@ const testimonials = [
   },
   {
     id: 3,
-    image: doc4,
+    image: docNewTwo,
     name: "Onyx Wallet",
     role: "Founder",
     company: "Quantum Assets Technologies S.I.A.",
@@ -51,7 +53,7 @@ const testimonials = [
   },
   {
     id: 3,
-    image: doc4,
+    image: doc2,
     name: "Xavier AI",
     role: "Founder",
     company: "Quantivium L.L.C.",
