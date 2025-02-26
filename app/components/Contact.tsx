@@ -56,7 +56,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="container flex flex-col justify-center items-center rounded-xl mx-auto px-4 mt-[-100px] md:mt-[-70px] w-[90%] md:w-full h-[800px] md:h-[850px]"
+      className="container flex flex-col justify-center items-center rounded-xl mx-auto px-4 mt-[-100px] md:mt-[-70px] w-[90%] md:w-full py-5 md:py-10"
       style={{
         backgroundImage: `url(${trans.src})`, // Set the image as background
         backgroundSize: "cover", // Ensure the image covers the entire div
@@ -65,7 +65,7 @@ export default function Contact() {
         border: "1px solid #696969",
       }}
     >
-      <h2 className="mt-6 text-[26px] w-[90%] md:w-[45%] md:text-[46px] leading-[48px] md:leading-[70px] font-bold text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400 text-center">
+      <h2 className=" text-[26px] w-[90%] md:w-[45%] md:text-[46px] leading-[48px] md:leading-[70px] font-bold text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400 text-center">
         Get In Touch With Us
       </h2>
 
