@@ -194,6 +194,7 @@ export default function Clients() {
           </div>
         </div>
       </div>
+      <div id="contact" className="scroll-mt-44"/>
       <Contact />
     </section>
   );
