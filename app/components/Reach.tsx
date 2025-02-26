@@ -25,26 +25,26 @@ export default function Reach() {
     {
       id: 1,
       title: "Project 1",
-      x: 390,
-      y: 150,
+      x: "30%", 
+      y: "40%",
       details: { title: "Project 1", description: "Description of Project 1" },
-    },
-    {
-      id: 1,
-      title: "Project 3",
-      x: 890,
-      y: 150,
-      details: { title: "Project 3", description: "Description of Project 3" },
     },
     {
       id: 2,
       title: "Project 2",
-      x: 400,
-      y: 250,
+      x: "50%",
+      y: "35%",
       details: { title: "Project 2", description: "Description of Project 2" },
     },
-    // Add more locations as needed
+    {
+      id: 3,
+      title: "Project 3",
+      x: "80%",
+      y: "25%",
+      details: { title: "Project 3", description: "Description of Project 3" },
+    },
   ];
+
 
   // Function to open modal with details at the clicked point
   const handlePointClick = (
@@ -112,29 +112,23 @@ export default function Reach() {
         {locations.map((location) => (
           <section
             key={location.id}
-            className="absolute w-14 h-14 flex justify-center items-center rounded-full"
+            className="absolute w-7 md:w-14 h-7 md:h-14 flex justify-center items-center rounded-full"
             style={{
               backgroundColor: "rgba(0, 227, 124, 0.1)",
-              top: `${location.y}px`,
-              left: `${location.x}px`,
-            }} // Most outer div, 10% opaque
+              top: location.y, // Use percentage-based position
+              left: location.x,
+              transform: "translate(-50%, -50%)", // Center the button properly
+            }}
             onClick={(e) => handlePointClick(e, location.details)}
           >
             <section
               className="w-8 h-8 flex justify-center items-center rounded-full"
-              style={{
-                backgroundColor: "rgba(0, 227, 124, 0.2)",
-                //  top: `${location.y}px`,
-                //   left: `${location.x}px`,
-              }}
+              style={{ backgroundColor: "rgba(0, 227, 124, 0.2)" }}
             >
               <button
-                key={location.id}
-                className=" w-3 h-3 rounded-full bg-green-500"
+                className="w-3 h-3 rounded-full bg-green-500"
                 style={{
-                  backgroundColor: "#00E37C", // Button is solid
-                  // top: `${location.y}px`,
-                  // left: `${location.x}px`,
+                  backgroundColor: "#00E37C",
                   boxShadow:
                     "0px 0px 5px rgba(0, 255, 123, 0.4), 0px 0px 10px rgba(0, 255, 123, 0.2)",
                 }}
@@ -142,6 +136,7 @@ export default function Reach() {
             </section>
           </section>
         ))}
+
 
         {/* Modal for project details */}
         {selectedProject && modalPosition && (

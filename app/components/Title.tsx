@@ -6,7 +6,7 @@ export default function Title({title}: any) {
         style={{border:"1px solid #00E37C"}}
         >
         <Image width={18} src={circle} alt="logo"/>
-        <p className="text-[12.5px] text-[#FFFFFF]">{title}</p>
+        <p className="text-[11px] md:text-[12.5px] text-[#FFFFFF]">{title}</p>
         </div>
 
     );

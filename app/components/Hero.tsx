@@ -38,10 +38,10 @@ export default function Hero() {
           {/* Empowering Businesses with Blockchain, Web3.0, & */}
           Navigating the Future through Blockchain, Web3.0{" "}
           <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
-            & Tech Solutions
+            & Tech Solutions.
             <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500"></span>
           </span>{" "}
-          .
+         
         </h2>
 
         <p className="mb-8 text-[13px] md:text-[16px] lg:text-[23px] text-[#AEB5AD]">

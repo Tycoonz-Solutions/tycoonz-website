@@ -27,21 +27,21 @@ const handleSubmit = async (e: React.FormEvent) => {
   }
 
   try {
-    // const response = await fetch("/api/send-email", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ email }), // Pass as object
-    // });
+    const response = await fetch("/api/subscription", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    });
 
-    // const result = await response.json();
-    // if (response.ok) {
+    const result = await response.json();
+    if (response.ok) {
       toast.success("You have subscribed successfully!");
       setEmail("");
-    // } else {
-    //   toast.error(result.message || "Subscription failed.");
-    // }
+    } else {
+      toast.error(result.message || "Subscription failed.");
+    }
   } catch (error) {
     console.error("Error submitting form:", error);
     toast.error("An error occurred while subscribing. Please try again.");
