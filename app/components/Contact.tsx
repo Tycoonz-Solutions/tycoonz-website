@@ -55,7 +55,6 @@ export default function Contact() {
 
   return (
     <div
-      id="contact"
       className="container flex flex-col justify-center items-center rounded-xl mx-auto px-4 mt-[-100px] md:mt-[-70px] w-[90%] md:w-full py-5 md:py-10"
       style={{
         backgroundImage: `url(${trans.src})`, // Set the image as background

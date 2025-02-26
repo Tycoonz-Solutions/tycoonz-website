@@ -7,7 +7,7 @@ import comp4 from "../../public/assets/comp4.png";
 
 export default function Solutions() {
   return (
-    <section className="relative py-16 text-center" id="services">
+    <section className="relative py-16 text-center">
       <div className="container flex flex-col justify-center items-center mx-auto px-4">
         <Title title="Our Expertise" />
         <h2 className="mt-6 text-[30px] w-[90%] md:w-[45%] md:text-[46px] leading-[48px] md:leading-[70px] font-bold text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
