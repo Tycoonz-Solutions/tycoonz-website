@@ -68,8 +68,11 @@ const handleSubmit = async (e: React.FormEvent) => {
               solve complex problems.
             </p>
 
+          
             <p className=" text-[13px] md:text-[14px] text-[#AEB5AD]">
-              Tycoonz Solutions Main Boulevard Rd, Block H, Valencia, Lahore{" "}
+              {/* Tycoonz Solutions Main Boulevard Rd, Block H, Valencia, Lahore{" "} */}
+              Pakistan Address: 12 A/8, H-Block, Main Blvd, Valencia Town, Lahore <br />
+              US Address: 6545 Market Ave. North Ste 100, North Canton, OH 44721
             </p>
           </div>
 
