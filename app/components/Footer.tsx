@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -9,45 +9,46 @@ import Social2 from "../../public/assets/Social2.png";
 import Social3 from "../../public/assets/Social3.png";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Link from "next/link";
 
 export default function Footer() {
-const [email, setEmail] = useState("");
+  const [email, setEmail] = useState("");
 
-const validateEmail = (email: string) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-  if (!validateEmail(email)) {
-    toast.error("Please enter a valid email address.");
-    return;
-  }
-
-  try {
-    const response = await fetch("/api/subscription", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email }),
-    });
-
-    const result = await response.json();
-    if (response.ok) {
-      toast.success("You have subscribed successfully!");
-      setEmail("");
-    } else {
-      toast.error(result.message || "Subscription failed.");
+    if (!validateEmail(email)) {
+      toast.error("Please enter a valid email address.");
+      return;
     }
-  } catch (error) {
-    console.error("Error submitting form:", error);
-    toast.error("An error occurred while subscribing. Please try again.");
-  }
-};
-  
+
+    try {
+      const response = await fetch("/api/subscription", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        toast.success("You have subscribed successfully!");
+        setEmail("");
+      } else {
+        toast.error(result.message || "Subscription failed.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("An error occurred while subscribing. Please try again.");
+    }
+  };
+
   return (
     <footer className="bg-[#]FFFFFF text-[#001835] py-10">
       <div className="container mx-auto px-4">
@@ -68,10 +69,10 @@ const handleSubmit = async (e: React.FormEvent) => {
               solve complex problems.
             </p>
 
-          
             <p className=" text-[13px] md:text-[14px] text-[#AEB5AD]">
               {/* Tycoonz Solutions Main Boulevard Rd, Block H, Valencia, Lahore{" "} */}
-              Pakistan Address: 12 A/8, H-Block, Main Blvd, Valencia Town, Lahore <br />
+              Pakistan Address: 12 A/8, H-Block, Main Blvd, Valencia Town,
+              Lahore <br />
               US Address: 6545 Market Ave. North Ste 100, North Canton, OH 44721
             </p>
           </div>
@@ -84,62 +85,62 @@ const handleSubmit = async (e: React.FormEvent) => {
               className="flex md:flex-col h-[100%] text-[#FFFFFF] mt-0 justify-between md:justify-evenly text-[12px] md:text-[14px]"
               // style={{ height: "-webkit-fill-available" }}
             >
-              <a href="#home" className="hover:text-green-500">
+              <Link href="#home" className="hover:text-green-500">
                 Home
-              </a>
-              <a href="#about" className="hover:text-green-500">
+              </Link>
+              <Link href="#about" className="hover:text-green-500">
                 About
-              </a>
-              {/* <a href="#team" className="hover:text-green-500">
+              </Link>
+              {/* <Link href="#team" className="hover:text-green-500">
                 Team
-              </a> */}
-              <a href="#services" className="hover:text-green-500">
+              </Link> */}
+              <Link href="#services" className="hover:text-green-500">
                 Services
-              </a>
-              <a href="#testimonials" className="hover:text-green-500">
+              </Link>
+              <Link href="#testimonials" className="hover:text-green-500">
                 Testimonials
-              </a>
-              <a href="#contact" className="hover:text-green-500">
+              </Link>
+              <Link href="#contact" className="hover:text-green-500">
                 Contact
-              </a>
+              </Link>
             </nav>
           </div>
 
           <div className=" flex flex-col md:w-[35%] mt-10 md:mt-0 gap-8 justify-evenly">
-          <div>
-      <label
-        htmlFor="email"
-        className="block md:mb-2 text-[13px] md:text-[14px] text-[#FFFFFF]"
-      >
-        Subscribe to our newsletter
-      </label>
-      <form onSubmit={handleSubmit}>
-        <div className="flex gap-6 align-middle items-center">
-          <input
-            id="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email address"
-            className="w-full px-4 py-2 bg-transparent text-[13px] md:text-[14px] border-b border-gray-500 focus:outline-none focus:border-green-500 text-[#FFFFFF] placeholder-gray-400"
-          />
-          <Image
-            src={emailArrow}
-            alt="Next Arrow"
-            className="w-[15.8px] h-[14.85px] ml-[-40px]"
-          />
-          <button
-            type="submit"
-            className="bg-[#00E37C] flex gap-2 py-2 justify-center align-middle items-center px-6 rounded-lg text-[12px] text-[#000000] md:text-[15px] hover:bg-green-500"
-            style={{
-              boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",
-            }}
-          >
-            Subscribe
-          </button>
-        </div>
-      </form>
-    </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block md:mb-2 text-[13px] md:text-[14px] text-[#FFFFFF]"
+              >
+                Subscribe to our newsletter
+              </label>
+              <form onSubmit={handleSubmit}>
+                <div className="flex gap-6 align-middle items-center">
+                  <input
+                    id="email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email address"
+                    className="w-full px-4 py-2 bg-transparent text-[13px] md:text-[14px] border-b border-gray-500 focus:outline-none focus:border-green-500 text-[#FFFFFF] placeholder-gray-400"
+                  />
+                  <Image
+                    src={emailArrow}
+                    alt="Next Arrow"
+                    className="w-[15.8px] h-[14.85px] ml-[-40px]"
+                  />
+                  <button
+                    type="submit"
+                    className="bg-[#00E37C] flex gap-2 py-2 justify-center align-middle items-center px-6 rounded-lg text-[12px] text-[#000000] md:text-[15px] hover:bg-green-500"
+                    style={{
+                      boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",
+                    }}
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+            </div>
 
             <div>
               <p className="mb-4 mt-6 md:mt-0 text-[13px] md:text-[14px] text-[#FFFFFF]">
@@ -161,12 +162,12 @@ const handleSubmit = async (e: React.FormEvent) => {
         <div
           className="w-full h-[1px] bg-[#AEB5AD] mt-12 mb-8"
           style={{ transform: "scaleY(0.5)" }}
-        ></div>
+        />
 
         <div className="text-[12px] w-full justify-between flex mt-2 md:mt-0  md:text-[14px] text-[#FFFFFF]">
           <div>© 2024 Tycoonz Solutions. All rights reserved.</div>
           <div className="flex gap-4">
-            <a
+            <Link
               href="https://www.linkedin.com/company/tycoonz-solutions/"
               target="_blank"
               rel="noopener noreferrer"
@@ -176,8 +177,8 @@ const handleSubmit = async (e: React.FormEvent) => {
                 alt="LinkedIn"
                 className="w-[24px] h-[24px]"
               />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.facebook.com/share/18Qpdfi43V/"
               target="_blank"
               rel="noopener noreferrer"
@@ -187,8 +188,8 @@ const handleSubmit = async (e: React.FormEvent) => {
                 alt="Instagram"
                 className="w-[24px] h-[24px]"
               />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.instagram.com/tycoonzsolutions?igsh=MTg0NnYzeXoyNW1pNA=="
               target="_blank"
               rel="noopener noreferrer"
@@ -198,7 +199,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 alt="Facebook"
                 className="w-[24px] h-[24px]"
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
