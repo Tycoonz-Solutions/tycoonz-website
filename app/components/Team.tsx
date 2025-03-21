@@ -1,21 +1,21 @@
-'use client';
-import { Carousel } from 'react-responsive-carousel';
+"use client";
+import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Image from "next/image";
-import leftArrow from '../../public/assets/leftArrow.png';
-import rightArrow from '../../public/assets/rightArrow.png';
-import member1 from '../../public/assets/doc1.png';
-import { useEffect, useState } from 'react';
+import type { StaticImageData } from "next/image";
+import leftArrow from "../../public/assets/leftArrow.png";
+import rightArrow from "../../public/assets/rightArrow.png";
+import member1 from "../../public/assets/doc1.png";
+import { useEffect, useState } from "react";
 
 interface Scientist {
   name: string;
   role: string;
   description: string;
-  source: any;
+  source: StaticImageData;
 }
 
 export default function Team() {
-  
   const expertists: Scientist[] = [
     {
       name: "Zain Ahmed",
@@ -89,15 +89,16 @@ export default function Team() {
           <div className="w-[30%]">
             <h2 className="text-[30px] md:text-[46px] leading-[38px] md:leading-[50px] font-bold text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
               <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
-               The People Powering Our Vision
-                <span className="absolute left-0 bottom-[-12px] w-full h-[5px] bg-green-500"></span>
+                The People Powering Our Vision
+                <span className="absolute left-0 bottom-[-12px] w-full h-[5px] bg-green-500" />
               </span>
             </h2>
           </div>
           <p className="mt-4 w-[55%] text-lg md:text-[18px] text-[#AEB5AD]">
-          Behind every innovation is a team of visionaries and experts 
-dedicated to turning ideas into impactful solutions. Meet the minds 
-driving our success </p>
+            Behind every innovation is a team of visionaries and experts
+            dedicated to turning ideas into impactful solutions. Meet the minds
+            driving our success{" "}
+          </p>
         </div>
         <Carousel
           showArrows={false}
@@ -112,41 +113,48 @@ driving our success </p>
           transitionTime={500}
           renderArrowPrev={customPrevArrow}
           renderArrowNext={customNextArrow}
-          selectedItem={isSmallScreen ? 2 : 1 }
+          selectedItem={isSmallScreen ? 2 : 1}
         >
-          {expertists.map((scientist, idx) => (
-        <div
-        key={idx}
-        className="relative rounded-lg overflow-hidden shadow-lg"
-        style={{
-          height: "450px",
-        }}
-      >
-        {/* Gradient overlay */}
-        <div
-          className="absolute inset-0 bg-gradient-to-b from-transparent to-black"
-          style={{ zIndex: 1 }}
-        ></div>
-        
-        {/* Image */}
-        <Image
-          src={scientist.source}
-          alt={scientist.name}
-          layout="fill"
-          objectFit="cover"
-          className="absolute inset-0 w-full h-full"
-          style={{ zIndex: 0 }}
-        />
-        
-        {/* Content */}
-        <div className="absolute bottom-0 left-0 w-full p-4 text-white text-left" style={{ zIndex: 2 }}>
-          <h3 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-l text-left from-white to-gray-400">{scientist.role}</h3>
-          <h4 className="text-md text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">{scientist.name}</h4> 
-          <p className="text-sm text-[#AEB5AD] mt-1">{scientist.description}</p>
-        </div>
-      </div>
-         
-          
+          {expertists.map((scientist) => (
+            <div
+              key={scientist.name}
+              className="relative rounded-lg overflow-hidden shadow-lg"
+              style={{
+                height: "450px",
+              }}
+            >
+              {/* Gradient overlay */}
+              <div
+                className="absolute inset-0 bg-gradient-to-b from-transparent to-black"
+                style={{ zIndex: 1 }}
+              />
+
+              {/* Image */}
+              <Image
+                src={scientist.source}
+                alt={scientist.name}
+                layout="fill"
+                objectFit="cover"
+                className="absolute inset-0 w-full h-full"
+                style={{ zIndex: 0 }}
+              />
+
+              {/* Content */}
+              <div
+                className="absolute bottom-0 left-0 w-full p-4 text-white text-left"
+                style={{ zIndex: 2 }}
+              >
+                <h3 className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-l text-left from-white to-gray-400">
+                  {scientist.role}
+                </h3>
+                <h4 className="text-md text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
+                  {scientist.name}
+                </h4>
+                <p className="text-sm text-[#AEB5AD] mt-1">
+                  {scientist.description}
+                </p>
+              </div>
+            </div>
           ))}
         </Carousel>
       </div>

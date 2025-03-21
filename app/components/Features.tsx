@@ -10,7 +10,7 @@ export default function Features() {
                 Who{" "}
                 <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
                   We Are
-                  <span className="absolute left-0 bottom-[-12px] rounded-full w-full h-[5px] bg-green-500"></span>
+                  <span className="absolute left-0 bottom-[-12px] rounded-full w-full h-[5px] bg-green-500" />
                 </span>
               </h2>
             </div>
@@ -30,7 +30,7 @@ export default function Features() {
                 Our{" "}
                 <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
                   Mission
-                  <span className="absolute left-0 bottom-[-12px] rounded-full w-full h-[5px] bg-green-500"></span>
+                  <span className="absolute left-0 bottom-[-12px] rounded-full w-full h-[5px] bg-green-500" />
                 </span>
               </h2>
             </div>

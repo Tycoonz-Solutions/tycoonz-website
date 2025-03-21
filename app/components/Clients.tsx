@@ -22,7 +22,8 @@ const testimonials = [
     name: "BlackChain",
     role: "MD CEO",
     company: "BlackChain Technology S.I.A.",
-    testimonial: "Partnering with Tycoonz Solution for our blockchain project was an incredible experience. Their deep expertise in Solana staking made integrating BCT staking features smooth and secure. The platform is efficient, user-friendly, and built with precision. We highly recommend them for any blockchain development!",
+    testimonial:
+      "Partnering with Tycoonz Solution for our blockchain project was an incredible experience. Their deep expertise in Solana staking made integrating BCT staking features smooth and secure. The platform is efficient, user-friendly, and built with precision. We highly recommend them for any blockchain development!",
   },
   {
     id: 2,
@@ -71,7 +72,7 @@ export default function Clients() {
 
   const prevSlide = () => {
     setActiveIndex(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
   };
 
@@ -86,7 +87,7 @@ export default function Clients() {
           What{" "}
           <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
             Our Clients
-            <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500"></span>
+            <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500" />
           </span>{" "}
           Say About Us
         </h2>
@@ -101,7 +102,7 @@ export default function Clients() {
           style={{
             backgroundImage: `url(${animeCarousel.src})`,
             backgroundSize: "contain",
-            backgroundPosition: "75% 40%", 
+            backgroundPosition: "75% 40%",
             backgroundRepeat: "no-repeat",
           }}
         >
@@ -113,9 +114,15 @@ export default function Clients() {
               style={{
                 boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",
               }}
+              onKeyDown={prevSlide}
             >
               <Image
-                src={testimonials[(activeIndex - 1 + testimonials.length) % testimonials.length].image}
+                src={
+                  testimonials[
+                    (activeIndex - 1 + testimonials.length) %
+                      testimonials.length
+                  ].image
+                }
                 alt="Previous"
                 // width={96}
                 // height={96}
@@ -168,7 +175,7 @@ export default function Clients() {
                       {testimonials[activeIndex].company}
                     </span>
                     <p className="text-[40px] md:text-[80px] h-[60px] md:mr-[-60px] font-medium text-[#FFFFFF26] flex justify-end">
-                    ”
+                      ”
                     </p>
                   </div>
                 </div>
@@ -182,19 +189,22 @@ export default function Clients() {
               style={{
                 boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",
               }}
+              onKeyDown={nextSlide}
             >
               <Image
-                src={testimonials[(activeIndex + 1) % testimonials.length].image}
+                src={
+                  testimonials[(activeIndex + 1) % testimonials.length].image
+                }
                 alt="Next"
                 // width={96}
                 // height={96}
-                 className="object-cover w-[50px] md:w-[96px]"
+                className="object-cover w-[50px] md:w-[96px]"
               />
             </div>
           </div>
         </div>
       </div>
-      <div id="contact" className="scroll-mt-44"/>
+      <div id="contact" className="scroll-mt-44" />
       <Contact />
     </section>
   );

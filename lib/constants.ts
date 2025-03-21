@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 export const keywords = [
   "Tycoonz Solutions, Tycoonz, Tycoon, Tycoonz Solutions",
   "Tycoonz Solutions",
@@ -168,3 +170,30 @@ export const keywords = [
   "Web3.0 community building for social impact projects",
   "Blockchain for social impact in developing countries",
 ];
+
+export const metadataObj: Metadata = {
+  title: "Tycoonz Solutions",
+  description: "Tycoonz Solutions - Navigating the Future.",
+  keywords,
+  robots: "follow, index",
+  category:
+    "Technology, Developer, Blockchain, Web3, AI, Crypto, Fintech, NFT, DeFi, Enterprise",
+  openGraph: {
+    title: "Tycoonz Solutions",
+    description: "Tycoonz Solutions - Navigating the Future.",
+    phoneNumbers: "+923174144853",
+    emails: "info@tycoonzsolutions.com",
+    countryName: "Pakistan",
+    images: [],
+    type: "website",
+    locale: "en_US",
+    siteName: "Tycoonz Solutions",
+    url: "https://tycoonzsolutions.com",
+    alternateLocale: "en_US",
+    determiner: "the",
+  },
+  facebook: {
+    appId: "123456789012345", // pending
+  },
+  manifest: new URL("https://tycoonzsolutions.com"),
+};

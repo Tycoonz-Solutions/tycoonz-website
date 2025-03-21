@@ -54,7 +54,13 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col ml-3 md:ml-0 md:flex-row justify-between">
           <div className="flex flex-col md:w-[25%] gap-8">
-            <Image src={logo} alt="Next Arrow" width={164} height={100} />
+            <Image
+              src={logo}
+              alt="App logo"
+              width={164}
+              height={100}
+              unoptimized
+            />
             <p className=" text-[14px] md:text-[15px] text-white font-bold">
               Our Journey
             </p>
@@ -85,24 +91,66 @@ export default function Footer() {
               className="flex md:flex-col h-[100%] text-[#FFFFFF] mt-0 justify-between md:justify-evenly text-[12px] md:text-[14px]"
               // style={{ height: "-webkit-fill-available" }}
             >
-              <Link href="#home" className="hover:text-green-500">
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .getElementById("home")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="hover:text-green-500 text-start"
+              >
                 Home
-              </Link>
-              <Link href="#about" className="hover:text-green-500">
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .getElementById("about")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="hover:text-green-500 text-start"
+              >
                 About
-              </Link>
+              </button>
               {/* <Link href="#team" className="hover:text-green-500">
                 Team
               </Link> */}
-              <Link href="#services" className="hover:text-green-500">
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .getElementById("services")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="hover:text-green-500 text-start"
+              >
                 Services
-              </Link>
-              <Link href="#testimonials" className="hover:text-green-500">
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .getElementById("testimonials")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="hover:text-green-500 text-start"
+              >
                 Testimonials
-              </Link>
-              <Link href="#contact" className="hover:text-green-500">
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="hover:text-green-500 text-start"
+              >
                 Contact
-              </Link>
+              </button>
             </nav>
           </div>
 
@@ -120,6 +168,7 @@ export default function Footer() {
                     id="email"
                     type="email"
                     value={email}
+                    autoComplete="email"
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email address"
                     className="w-full px-4 py-2 bg-transparent text-[13px] md:text-[14px] border-b border-gray-500 focus:outline-none focus:border-green-500 text-[#FFFFFF] placeholder-gray-400"

@@ -10,7 +10,7 @@ export default function Hero() {
       className="relative flex align-middle items-center justify-between bg-cover bg-center bg-no-repeat text-white text-center w-full px-[40px] md:px-[100px]"
       style={{
         backgroundImage: `url(${banner.src})`,
-        minHeight: `100vh`,
+        minHeight: "100vh",
         width: "100%",
         backgroundSize: "cover",
       }}
@@ -21,7 +21,7 @@ export default function Hero() {
         style={{
           filter: "blur(80px)",
         }}
-      ></div>
+      />
 
       {/* Bottom-left neon shape */}
       <div
@@ -29,7 +29,7 @@ export default function Hero() {
         style={{
           filter: "blur(80px)",
         }}
-      ></div>
+      />
 
       {/* Content */}
       <div className="relative w-[100%] md:w-[43%] flex flex-col align-bottom text-left pr-4 col-span-3 z-10 container ">
@@ -39,9 +39,8 @@ export default function Hero() {
           Navigating the Future through Blockchain, Web3.0{" "}
           <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
             & Tech Solutions.
-            <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500"></span>
+            <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500" />
           </span>{" "}
-         
         </h2>
 
         <p className="mb-8 text-[13px] md:text-[16px] lg:text-[23px] text-[#AEB5AD]">
@@ -50,6 +49,7 @@ export default function Hero() {
         <div className="flex justify-start space-x-4">
           <a href="#contact">
             <button
+              type="button"
               className="bg-[#00E37C] flex gap-2 py-2 justify-center align-middle items-center px-6 rounded-lg text-[12px] text-[#000000] md:text-[15px] hover:bg-green-500"
               style={{
                 boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",

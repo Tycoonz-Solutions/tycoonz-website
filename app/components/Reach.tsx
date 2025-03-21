@@ -13,7 +13,7 @@ type ProjectDetails = {
 
 export default function Reach() {
   const [selectedProject, setSelectedProject] = useState<ProjectDetails | null>(
-    null
+    null,
   );
   const [modalPosition, setModalPosition] = useState<{
     top: number;
@@ -25,7 +25,7 @@ export default function Reach() {
     {
       id: 1,
       title: "Project 1",
-      x: "30%", 
+      x: "30%",
       y: "40%",
       details: { title: "Project 1", description: "Description of Project 1" },
     },
@@ -45,11 +45,10 @@ export default function Reach() {
     },
   ];
 
-
   // Function to open modal with details at the clicked point
   const handlePointClick = (
     event: React.MouseEvent,
-    project: ProjectDetails
+    project: ProjectDetails,
   ) => {
     // Get the map container's bounding rectangle
     const mapBounds = event.currentTarget
@@ -94,7 +93,7 @@ export default function Reach() {
           We Serve{" "}
           <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
             Our Clients
-            <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500"></span>
+            <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500" />
           </span>{" "}
           Globally
         </h2>
@@ -126,6 +125,7 @@ export default function Reach() {
               style={{ backgroundColor: "rgba(0, 227, 124, 0.2)" }}
             >
               <button
+                type="button"
                 className="w-3 h-3 rounded-full bg-green-500"
                 style={{
                   backgroundColor: "#00E37C",
@@ -136,7 +136,6 @@ export default function Reach() {
             </section>
           </section>
         ))}
-
 
         {/* Modal for project details */}
         {selectedProject && modalPosition && (
@@ -194,7 +193,7 @@ export default function Reach() {
           Need a{" "}
           <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
             Solution
-            <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500"></span>
+            <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500" />
           </span>{" "}
           Tailored Just For You?
         </h2>
@@ -204,6 +203,7 @@ export default function Reach() {
         </p>
 
         <button
+          type="button"
           className="bg-[#00E37C] mt-14 flex gap-2 py-2 justify-center align-middle items-center px-6 rounded-lg text-[12px] text-[#000000] md:text-[15px] hover:bg-green-500"
           style={{
             boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",

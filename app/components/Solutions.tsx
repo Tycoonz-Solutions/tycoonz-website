@@ -12,8 +12,8 @@ export default function Solutions() {
         <Title title="Our Expertise" />
         <h2 className="mt-6 text-[30px] w-[90%] md:w-[45%] md:text-[46px] leading-[48px] md:leading-[70px] font-bold text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
           <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-l from-white to-gray-400">
-          Solutions Built
-            <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500"></span>
+            Solutions Built
+            <span className="absolute left-0 bottom-[-2px] w-full h-[5px] rounded-full bg-green-500" />
           </span>{" "}
           Around Your Success
         </h2>
@@ -41,7 +41,7 @@ export default function Solutions() {
             transform: "rotate(55deg)",
             filter: "blur(80px)",
           }}
-        ></div>
+        />
       </div>
 
       {/* Second Solution */}
@@ -81,7 +81,7 @@ export default function Solutions() {
             transform: "rotate(115deg)",
             filter: "blur(80px)",
           }}
-        ></div>
+        />
       </div>
     </section>
   );

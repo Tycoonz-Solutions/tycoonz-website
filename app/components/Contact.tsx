@@ -15,7 +15,9 @@ export default function Contact() {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -49,7 +51,9 @@ export default function Contact() {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      toast.error("An error occurred while sending your message. Please try again.");
+      toast.error(
+        "An error occurred while sending your message. Please try again.",
+      );
     }
   };
 
@@ -125,6 +129,7 @@ export default function Contact() {
             onChange={handleChange}
             placeholder="Write your email"
             className="w-full md:px-4 py-2 bg-transparent border-b border-gray-500 focus:outline-none focus:border-green-500"
+            autoComplete="email"
           />
         </div>
 
@@ -157,7 +162,7 @@ export default function Contact() {
             onChange={handleChange}
             rows={5}
             className="w-full md:px-4 py-2 bg-transparent border-b border-gray-500 focus:outline-none focus:border-green-500"
-          ></textarea>
+          />
         </div>
 
         {/* Submit Button */}
