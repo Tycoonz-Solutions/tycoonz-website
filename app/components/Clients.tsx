@@ -112,7 +112,7 @@ export default function Clients() {
               style={{
                 boxShadow: "0px 15px 60px 0px rgba(75, 209, 160, 0.5)",
               }}
-              onKeyDown={prevSlide}
+              onKeyDown={() => {}}
             >
               <Image
                 src={
