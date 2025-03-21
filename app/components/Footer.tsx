@@ -2,16 +2,17 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import logo from "../../public/assets/logo.png";
+import type { StaticImageData } from "next/image";
+// import logo from "../../public/assets/logo.png";
 import emailArrow from "../../public/assets/emailArrow.png";
-import Social1 from "../../public/assets/Social1.png";
-import Social2 from "../../public/assets/Social2.png";
-import Social3 from "../../public/assets/Social3.png";
+import Social1 from "../../public/assets/Social1.webp";
+import Social2 from "../../public/assets/Social2.webp";
+import Social3 from "../../public/assets/Social3.webp";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ logo }: { logo: StaticImageData }) {
   const [email, setEmail] = useState("");
 
   const validateEmail = (email: string) => {

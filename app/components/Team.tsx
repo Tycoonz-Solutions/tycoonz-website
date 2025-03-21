@@ -5,7 +5,7 @@ import Image from "next/image";
 import type { StaticImageData } from "next/image";
 import leftArrow from "../../public/assets/leftArrow.png";
 import rightArrow from "../../public/assets/rightArrow.png";
-import member1 from "../../public/assets/doc1.png";
+import member1 from "../../public/assets/doc1.webp";
 import { useEffect, useState } from "react";
 
 interface Scientist {

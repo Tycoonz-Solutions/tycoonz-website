@@ -5,6 +5,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import { keywords, metadataObj } from "@/lib/constants";
 import type { Metadata } from "next";
+import logo from "/public/assets/logo.png";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -24,9 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plusJakartaSans.variable} font-sans`}>
       <body className="bg-[#000000] ">
-        <Navbar />
+        <Navbar logo={logo} />
         {children}
-        <Footer />
+        <Footer logo={logo} />
         <ToastContainer
           position="top-right"
           autoClose={5000}

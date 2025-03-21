@@ -1,9 +1,9 @@
 import Title from "./Title";
 import Solution from "./Solution";
-import comp1 from "../../public/assets/comp1.png";
-import comp2 from "../../public/assets/comp2.png";
-import comp3 from "../../public/assets/comp3.png";
-import comp4 from "../../public/assets/comp4.png";
+import comp1 from "../../public/assets/comp1.webp";
+import comp2 from "../../public/assets/comp2.webp";
+import comp3 from "../../public/assets/comp3.webp";
+import comp4 from "../../public/assets/comp4.webp";
 
 export default function Solutions() {
   return (

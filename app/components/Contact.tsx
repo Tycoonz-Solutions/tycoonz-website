@@ -1,7 +1,6 @@
 import Title from "./Title";
 import Image from "next/image";
-import map from "../../public/assets/map.png";
-import trans from "../../public/assets/trans2.png";
+import trans from "../../public/assets/trans2.webp";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

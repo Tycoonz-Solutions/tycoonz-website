@@ -193,7 +193,7 @@ export const metadataObj: Metadata = {
     determiner: "the",
   },
   facebook: {
-    appId: "123456789012345", // pending
+    appId: "9372125112870007",
   },
   manifest: new URL("https://tycoonzsolutions.com"),
 };

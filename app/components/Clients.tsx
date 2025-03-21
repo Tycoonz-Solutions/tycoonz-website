@@ -6,14 +6,12 @@ import Title from "./Title";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Contact from "./Contact";
 import Image from "next/image";
-import animeCarousel from "../../public/assets/animeCarousel.png";
-import doc1 from "../../public/assets/test1.png";
-import doc2 from "../../public/assets/doc1.png";
-import doc3 from "../../public/assets/doc3.png";
-import doc4 from "../../public/assets/doc4.png";
+import animeCarousel from "../../public/assets/animeCarousel.webp";
+import doc2 from "../../public/assets/doc1.webp";
+import doc4 from "../../public/assets/doc4.webp";
 import nameLine from "../../public/assets/nameLine.png";
-import docNew from "../../public/assets/dpp (2).jpg";
-import docNewTwo from "../../public/assets/newwwww (1).jpg";
+import docNew from "../../public/assets/dpp (2).webp";
+import docNewTwo from "../../public/assets/newwwww (1).webp";
 
 const testimonials = [
   {

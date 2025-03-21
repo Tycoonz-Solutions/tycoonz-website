@@ -1,4 +1,4 @@
-import circle from "../../public/assets/circle.png";
+import circle from "../../public/assets/circle.webp";
 import Image from "next/image";
 export default function Title({ title }: { title: string }) {
   return (

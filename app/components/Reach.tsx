@@ -2,8 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import Title from "./Title";
 import Image from "next/image";
-import map from "../../public/assets/mapCrt.png";
-import trans from "../../public/assets/trans.png";
+import map from "../../public/assets/mapCrt.webp";
+import trans from "../../public/assets/trans.webp";
 import countryMap from "../../public/assets/AU.png"; // Example image for the country map
 
 type ProjectDetails = {

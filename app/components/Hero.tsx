@@ -1,6 +1,6 @@
 import Image from "next/image";
-import banner from "../../public/assets/heroBg.png";
-import bannerTwo from "../../public/assets/heroBgCircle.png";
+import banner from "../../public/assets/heroBg.webp";
+import bannerTwo from "../../public/assets/heroBgCircle.webp";
 import Title from "./Title";
 
 export default function Hero() {

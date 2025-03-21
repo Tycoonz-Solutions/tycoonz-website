@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { StaticImageData } from "next/image";
-import solutionBox from "../../public/assets/solutionBox.png";
+import solutionBox from "../../public/assets/solutionBox.webp";
 
 interface SolutionProps {
   title: string;

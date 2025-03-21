@@ -4,9 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 import logo from "../../public/assets/logo.png";
 import Link from "next/link";
-// import portfolio from "../../public/";
+import type { StaticImageData } from "next/image";
 
-export default function Navbar() {
+export default function Navbar({ logo }: { logo: StaticImageData }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -21,6 +21,7 @@ export default function Navbar() {
               .getElementById("home")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
+          priority={true}
           className="cursor-pointer"
           unoptimized
         />
@@ -133,14 +134,14 @@ export default function Navbar() {
             </Link>
           </li>
           <li className="md:border-0">
-            <a
+            <Link
               href="/portfolio.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex justify-end mr-8 px-4 py-2 text-sm text-center hover:text-green-500"
             >
               Portfolio
-            </a>
+            </Link>
           </li>
 
           <li className="mt-2 flex justify-end mb-4 md:mt-0 md:mb-0">
